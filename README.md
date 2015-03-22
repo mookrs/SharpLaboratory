@@ -1,3 +1,5 @@
-# Extra
+# sharpstore
 
-A project for learning Git, Python and Uliweb.
+Yet Another Windows laboratory.
+
+##  Don't Repeat yourself.
