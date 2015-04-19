@@ -172,7 +172,7 @@ namespace AsyncTest
             });
         }
 
-        static string GetNameWithOnCompleted()
+        public static string GetNameWithOnCompleted()
         {
             Console.WriteLine("我是另一个线程：Thread Id {0}", Thread.CurrentThread.ManagedThreadId);
             Thread.Sleep(2000);
