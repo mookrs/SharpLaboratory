@@ -30,24 +30,23 @@ namespace GetFavicon
 
         private void GetFaviconsButton_OnClick(object sender, RoutedEventArgs e)
         {
-            foreach (string domain in Domains)
-            {
-                AddFavicon(domain);
-            }
+            AddRemainingFavicons(Domains, 0);
         }
 
-        private void AddFavicon(string domain)
+        private void AddRemainingFavicons(List<string> domains, int i)
         {
             var webClient = new WebClient();
-            webClient.DownloadDataCompleted += OnWebClient_DownloadDataCompleted;
-            webClient.DownloadDataAsync(new Uri("http://" + domain + "/favicon.ico"));
-        }
+            webClient.DownloadDataCompleted += (o, e) =>
+            {
+                Image imageControl = MakeImageControl(e.Result);
+                FaviconsPanel.Children.Add(imageControl);
 
-        // 这个版本有bug，因为图标出现的顺序是按下载快慢来排的
-        private void OnWebClient_DownloadDataCompleted(object sender, DownloadDataCompletedEventArgs e)
-        {
-            Image imageControl = MakeImageControl(e.Result);
-            FaviconsPanel.Children.Add(imageControl);
+                if (i + 1 < domains.Count)
+                {
+                    AddRemainingFavicons(domains, i + 1);
+                }
+            };
+            webClient.DownloadDataAsync(new Uri("http://" + domains[i] + "/favicon.ico"));
         }
 
         private Image MakeImageControl(byte[] bytes)
