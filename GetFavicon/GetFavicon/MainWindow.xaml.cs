@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Windows;
@@ -38,8 +39,13 @@ namespace GetFavicon
         private void AddFavicon(string domain)
         {
             var webClient = new WebClient();
-            byte[] bytes = webClient.DownloadData("http://" + domain + "/favicon.ico");
-            Image imageControl = MakeImageControl(bytes);
+            webClient.DownloadDataCompleted += OnWebClient_DownloadDataCompleted;
+            webClient.DownloadDataAsync(new Uri("http://" + domain + "/favicon.ico"));
+        }
+
+        private void OnWebClient_DownloadDataCompleted(object sender, DownloadDataCompletedEventArgs e)
+        {
+            Image imageControl = MakeImageControl(e.Result);
             FaviconsPanel.Children.Add(imageControl);
         }
 
