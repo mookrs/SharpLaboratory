@@ -43,6 +43,7 @@ namespace GetFavicon
             webClient.DownloadDataAsync(new Uri("http://" + domain + "/favicon.ico"));
         }
 
+        // 这个版本有bug，因为图标出现的顺序是按下载快慢来排的
         private void OnWebClient_DownloadDataCompleted(object sender, DownloadDataCompletedEventArgs e)
         {
             Image imageControl = MakeImageControl(e.Result);
