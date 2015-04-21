@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -30,23 +31,18 @@ namespace GetFavicon
 
         private void GetFaviconsButton_OnClick(object sender, RoutedEventArgs e)
         {
-            AddRemainingFavicons(Domains, 0);
+            foreach (string domain in Domains)
+            {
+                AddAFavicon(domain);
+            }
         }
 
-        private void AddRemainingFavicons(List<string> domains, int i)
+        private async void AddAFavicon(string domain)
         {
-            var webClient = new WebClient();
-            webClient.DownloadDataCompleted += (o, e) =>
-            {
-                Image imageControl = MakeImageControl(e.Result);
-                FaviconsPanel.Children.Add(imageControl);
-
-                if (i + 1 < domains.Count)
-                {
-                    AddRemainingFavicons(domains, i + 1);
-                }
-            };
-            webClient.DownloadDataAsync(new Uri("http://" + domains[i] + "/favicon.ico"));
+            WebClient webClient = new WebClient();
+            byte[] bytes = await webClient.DownloadDataTaskAsync("http://" + domain + "/favicon.ico");
+            Image imageControl = MakeImageControl(bytes);
+            FaviconsPanel.Children.Add(imageControl);
         }
 
         private Image MakeImageControl(byte[] bytes)
