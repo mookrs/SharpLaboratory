@@ -10,6 +10,19 @@ namespace StrategyPattern
     {
         static void Main(string[] args)
         {
+            var mallardDuck = new MallardDuck();
+            var redheadDuck = new RedheadDuck();
+            var rubberDuck = new RubberDuck();
+
+            mallardDuck.Display();
+            redheadDuck.Display();
+            rubberDuck.Display();
+
+            mallardDuck.Quack();
+            redheadDuck.Quack();
+            rubberDuck.Quack();
+
+            Console.ReadKey();
         }
     }
 }
