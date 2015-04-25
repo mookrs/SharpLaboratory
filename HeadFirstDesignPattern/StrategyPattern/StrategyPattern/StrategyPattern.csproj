@@ -41,19 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FlyNoWay.cs" />
-    <Compile Include="FlyWithWings.cs" />
-    <Compile Include="IFlyBehavior.cs" />
-    <Compile Include="IQuackBehavior.cs" />
-    <Compile Include="MuteQuack.cs" />
-    <Compile Include="NormalQuack.cs" />
+    <Compile Include="Behaviors\FlyNoWay.cs" />
+    <Compile Include="Behaviors\FlyWithWings.cs" />
+    <Compile Include="Interfaces\IFlyBehavior.cs" />
+    <Compile Include="Interfaces\IQuackBehavior.cs" />
+    <Compile Include="Behaviors\MuteQuack.cs" />
+    <Compile Include="Behaviors\NormalQuack.cs" />
     <Compile Include="RedheadDuck.cs" />
     <Compile Include="Duck.cs" />
     <Compile Include="MallardDuck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RubberDuck.cs" />
-    <Compile Include="Squeak.cs" />
+    <Compile Include="Behaviors\Squeak.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -18,9 +18,9 @@ namespace StrategyPattern
             redheadDuck.Display();
             rubberDuck.Display();
 
-            mallardDuck.Quack();
-            redheadDuck.Quack();
-            rubberDuck.Quack();
+            mallardDuck.PerformQuack();
+            //redheadDuck.PerformQuack();
+            //rubberDuck.PerformQuack();
 
             Console.ReadKey();
         }
