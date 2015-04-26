@@ -11,6 +11,7 @@ namespace StrategyPattern
         public MallardDuck()
         {
             QuackBehavior = new NormalQuack();
+            FlyBehavior = new FlyWithWings();
         }
 
         public override void Display()

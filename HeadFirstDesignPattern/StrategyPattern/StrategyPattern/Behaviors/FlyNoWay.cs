@@ -10,7 +10,7 @@ namespace StrategyPattern
     {
         public void Fly()
         {
-            Console.WriteLine("I can't fly!");
+            Console.WriteLine("I can't fly.");
         }
     }
 }

@@ -18,7 +18,7 @@ namespace StrategyPattern
 
         public void Swim()
         {
-            Console.WriteLine("I'm Swimming.");
+            Console.WriteLine("All ducks float, even decoys!");
         }
 
         public abstract void Display();

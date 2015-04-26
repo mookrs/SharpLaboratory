@@ -22,6 +22,8 @@ namespace StrategyPattern
             //redheadDuck.PerformQuack();
             //rubberDuck.PerformQuack();
 
+            mallardDuck.PerformFly();
+
             Console.ReadKey();
         }
     }
