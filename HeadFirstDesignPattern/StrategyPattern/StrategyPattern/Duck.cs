@@ -27,5 +27,15 @@ namespace StrategyPattern
         {
             FlyBehavior.Fly();
         }
+
+        public void SetFlayBehavior(IFlyBehavior flyBehavior)
+        {
+            FlyBehavior = flyBehavior;
+        }
+
+        public void SetQuackBehavior(IQuackBehavior quackBehavior)
+        {
+            QuackBehavior = quackBehavior;
+        }
     }
 }
