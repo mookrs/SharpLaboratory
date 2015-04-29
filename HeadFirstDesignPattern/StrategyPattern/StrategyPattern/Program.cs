@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StrategyPattern.Behaviors;
 
 namespace StrategyPattern
 {
@@ -13,16 +14,17 @@ namespace StrategyPattern
             var mallardDuck = new MallardDuck();
             var redheadDuck = new RedheadDuck();
             var rubberDuck = new RubberDuck();
+            var modelDuck = new ModelDuck();
+
 
             mallardDuck.Display();
-            redheadDuck.Display();
-            rubberDuck.Display();
-
             mallardDuck.PerformQuack();
-            //redheadDuck.PerformQuack();
-            //rubberDuck.PerformQuack();
-
             mallardDuck.PerformFly();
+
+            modelDuck.Display();
+            modelDuck.PerformFly();
+            modelDuck.SetFlayBehavior(new FlyRocketPowered());
+            modelDuck.PerformFly();
 
             Console.ReadKey();
         }

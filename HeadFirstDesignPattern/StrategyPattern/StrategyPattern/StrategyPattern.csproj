@@ -42,11 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\FlyNoWay.cs" />
+    <Compile Include="Behaviors\FlyRocketPowered.cs" />
     <Compile Include="Behaviors\FlyWithWings.cs" />
     <Compile Include="Interfaces\IFlyBehavior.cs" />
     <Compile Include="Interfaces\IQuackBehavior.cs" />
     <Compile Include="Behaviors\MuteQuack.cs" />
     <Compile Include="Behaviors\NormalQuack.cs" />
+    <Compile Include="ModelDuck.cs" />
     <Compile Include="RedheadDuck.cs" />
     <Compile Include="Duck.cs" />
     <Compile Include="MallardDuck.cs" />
