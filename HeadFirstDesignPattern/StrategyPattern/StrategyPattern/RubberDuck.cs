@@ -6,21 +6,18 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
+    // 橡皮鸭
     public class RubberDuck : Duck
     {
-        public new void Quack()
+        public RubberDuck()
         {
-            Console.WriteLine("吱吱叫！");
+            QuackBehavior = new Squeak();
+            FlyBehavior = new FlyNoWay();
         }
 
         public override void Display()
         {
             Console.WriteLine("I'm made up of rubber.");
-        }
-
-        public new void Fly()
-        {
-            
         }
     }
 }

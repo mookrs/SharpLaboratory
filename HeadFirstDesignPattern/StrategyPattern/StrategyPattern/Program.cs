@@ -21,6 +21,14 @@ namespace StrategyPattern
             mallardDuck.PerformQuack();
             mallardDuck.PerformFly();
 
+            redheadDuck.Display();
+            redheadDuck.PerformQuack();
+            redheadDuck.PerformFly();
+
+            rubberDuck.Display();
+            rubberDuck.PerformQuack();
+            rubberDuck.PerformFly();
+
             modelDuck.Display();
             modelDuck.PerformFly();
             modelDuck.SetFlayBehavior(new FlyRocketPowered());

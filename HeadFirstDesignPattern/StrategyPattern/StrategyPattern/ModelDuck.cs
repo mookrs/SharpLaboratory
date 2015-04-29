@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
+    // 模型鸭
     public class ModelDuck : Duck
     {
         public ModelDuck()
