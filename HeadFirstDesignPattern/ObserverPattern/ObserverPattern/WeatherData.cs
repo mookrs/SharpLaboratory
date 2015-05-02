@@ -1,37 +1,56 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ObserverPattern
 {
-    public class WeatherData
+    public class WeatherData : ISubject
     {
+        private List<IObserver> _observers;
+        private float _temperature;
+        private float _humidity;
+        private float _pressure;
+
         private CurrentConditionsDisplay _currentConditionsDisplay = new CurrentConditionsDisplay();
         private StatisticsDisplay _statisticsDisplay = new StatisticsDisplay();
         private ForecastDisplay _forecastDisplay = new ForecastDisplay();
 
-        public void MeasurementsChanged()
+        public WeatherData()
         {
-            float temp = GetTemperature();
-            float humidity = GetHumidity();
-            float pressure = GetPressure();
-
-            _currentConditionsDisplay.Update(temp, humidity, pressure);
-            _statisticsDisplay.Update(temp, humidity, pressure);
-            _forecastDisplay.Update(temp, humidity, pressure);
+            _observers = new List<IObserver>();
         }
 
-        public void RegisterObserver()
+        public void RegisterObserver(IObserver o)
         {
-            
+            _observers.Add(o);
         }
 
-        public void RemoveObserver()
+        public void RemoveObserver(IObserver o)
         {
-            
+            int i = _observers.IndexOf(o);
+            if (i >= 0)
+            {
+                _observers.RemoveAt(i);
+            }
         }
 
         public void NotifyObservers()
         {
-            
+            foreach (IObserver observer in _observers)
+            {
+                observer.Update(_temperature, _humidity, _pressure);
+            }
+        }
+
+        public void MeasurementsChanged()
+        {
+            NotifyObservers();
+        }
+
+        public void SetMeasurements(float temperature, float humidity, float pressure)
+        {
+            _temperature = temperature;
+            _humidity = humidity;
+            _pressure = pressure;
         }
 
         private static float GetTemperature()
