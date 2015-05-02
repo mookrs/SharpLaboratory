@@ -19,6 +19,21 @@ namespace ObserverPattern
             _forecastDisplay.Update(temp, humidity, pressure);
         }
 
+        public void RegisterObserver()
+        {
+            
+        }
+
+        public void RemoveObserver()
+        {
+            
+        }
+
+        public void NotifyObservers()
+        {
+            
+        }
+
         private static float GetTemperature()
         {
             throw new NotImplementedException();
