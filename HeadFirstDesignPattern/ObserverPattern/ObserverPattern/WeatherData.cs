@@ -10,10 +10,6 @@ namespace ObserverPattern
         private float _humidity;
         private float _pressure;
 
-        private CurrentConditionsDisplay _currentConditionsDisplay = new CurrentConditionsDisplay();
-        private StatisticsDisplay _statisticsDisplay = new StatisticsDisplay();
-        private ForecastDisplay _forecastDisplay = new ForecastDisplay();
-
         public WeatherData()
         {
             _observers = new List<IObserver>();
@@ -51,21 +47,7 @@ namespace ObserverPattern
             _temperature = temperature;
             _humidity = humidity;
             _pressure = pressure;
-        }
-
-        private static float GetTemperature()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static float GetHumidity()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static float GetPressure()
-        {
-            throw new NotImplementedException();
+            MeasurementsChanged();
         }
     }
 }
