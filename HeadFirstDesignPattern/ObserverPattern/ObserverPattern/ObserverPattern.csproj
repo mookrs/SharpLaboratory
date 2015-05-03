@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CurrentConditionsDisplay.cs" />
     <Compile Include="ForecastDisplay.cs" />
+    <Compile Include="HeatIndexDisplay.cs" />
     <Compile Include="Interfaces\IDisplayElement.cs" />
     <Compile Include="Interfaces\IObserver.cs" />
     <Compile Include="Interfaces\ISubject.cs" />
