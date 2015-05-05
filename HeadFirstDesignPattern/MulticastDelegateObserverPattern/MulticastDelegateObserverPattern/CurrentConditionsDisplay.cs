@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MulticastDelegateObserverPattern.Interfaces;
+﻿using MulticastDelegateObserverPattern.Interfaces;
+using System;
 
 namespace MulticastDelegateObserverPattern
 {
@@ -11,7 +7,6 @@ namespace MulticastDelegateObserverPattern
     {
         private float _temperature;
         private float _humidity;
-
 
         public void OnMeasurementsChanged(float temperature, float humidity, float pressure)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MulticastDelegateObserverPattern
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
