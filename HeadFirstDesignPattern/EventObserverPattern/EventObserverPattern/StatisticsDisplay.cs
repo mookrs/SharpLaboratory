@@ -12,17 +12,18 @@ namespace EventObserverPattern
 
         public void OnMeasurementsChanged(object sender, WeatherData.MeasurementArgs args)
         {
-            _tempSum += args.Temperature;
+            var temp = args.Temperature;
+            _tempSum += temp;
             _numReadings++;
 
-            if (args.Temperature > _maxTemp)
+            if (temp > _maxTemp)
             {
-                _maxTemp = args.Temperature;
+                _maxTemp = temp;
             }
 
-            if (args.Temperature < _minTemp)
+            if (temp < _minTemp)
             {
-                _minTemp = args.Temperature;
+                _minTemp = temp;
             }
 
             Display();
