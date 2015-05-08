@@ -19,9 +19,9 @@ namespace EventObserverPattern
             return index;
         }
 
-        public void OnMeasurementsChanged(float temp, float rh, float pressure)
+        public void OnMeasurementsChanged(object sender, WeatherData.MeasurementArgs args)
         {
-            _heatIndex = ComputeHeatIndex(temp, rh);
+            _heatIndex = ComputeHeatIndex(args.Temperature, args.Humidity);
             Display();
         }
 

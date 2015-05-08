@@ -8,10 +8,10 @@ namespace EventObserverPattern
         private float _currentPressure = 29.92f;
         private float _lastPressure;
 
-        public void OnMeasurementsChanged(float temp, float humidity, float pressure)
+        public void OnMeasurementsChanged(object sender, WeatherData.MeasurementArgs args)
         {
             _lastPressure = _currentPressure;
-            _currentPressure = pressure;
+            _currentPressure = args.Pressure;
 
             Display();
         }

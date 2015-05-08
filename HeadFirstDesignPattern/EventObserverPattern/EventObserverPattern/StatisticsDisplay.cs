@@ -10,19 +10,19 @@ namespace EventObserverPattern
         private float _tempSum = 0.0f;
         private int _numReadings;
 
-        public void OnMeasurementsChanged(float temp, float humidity, float pressure)
+        public void OnMeasurementsChanged(object sender, WeatherData.MeasurementArgs args)
         {
-            _tempSum += temp;
+            _tempSum += args.Temperature;
             _numReadings++;
 
-            if (temp > _maxTemp)
+            if (args.Temperature > _maxTemp)
             {
-                _maxTemp = temp;
+                _maxTemp = args.Temperature;
             }
 
-            if (temp < _minTemp)
+            if (args.Temperature < _minTemp)
             {
-                _minTemp = temp;
+                _minTemp = args.Temperature;
             }
 
             Display();

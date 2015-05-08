@@ -7,8 +7,8 @@
     <ProjectGuid>{404B6E1F-BB86-4F58-A334-5243F8013F3E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MulticastDelegateObserverPattern</RootNamespace>
-    <AssemblyName>MulticastDelegateObserverPattern</AssemblyName>
+    <RootNamespace>EventObserverPattern</RootNamespace>
+    <AssemblyName>EventObserverPattern</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
