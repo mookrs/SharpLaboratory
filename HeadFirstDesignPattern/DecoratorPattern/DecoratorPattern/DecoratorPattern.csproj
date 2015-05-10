@@ -47,6 +47,9 @@
     <Compile Include="Beverages\Decat.cs" />
     <Compile Include="Beverages\Espresso.cs" />
     <Compile Include="Beverages\HouseBlend.cs" />
+    <Compile Include="Condiments\Milk.cs" />
+    <Compile Include="Condiments\Whip.cs" />
+    <Compile Include="Condiments\Soy.cs" />
     <Compile Include="Condiments\Mocha.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
