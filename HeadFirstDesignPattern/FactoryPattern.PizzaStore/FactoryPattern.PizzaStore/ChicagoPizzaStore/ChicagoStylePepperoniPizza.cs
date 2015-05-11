@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern.PizzaStore
 {
-    public class CheesePizza : Pizza
+    public class ChicagoStylePepperoniPizza : Pizza
     {
     }
 }

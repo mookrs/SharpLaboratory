@@ -6,20 +6,11 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern.PizzaStore
 {
-    public class PizzaStore
+    public abstract class PizzaStore
     {
-        private SimplePizzaFactory _factory;
-
-        public PizzaStore(SimplePizzaFactory factory)
-        {
-            _factory = factory;
-        }
-
         public Pizza OrderPizza(string type)
         {
-            Pizza pizza;
-
-            pizza = _factory.CreatePizza(type);
+            var pizza = CreatePizza(type);
 
             pizza.Prepare();
             pizza.Bake();
@@ -27,5 +18,7 @@ namespace FactoryPattern.PizzaStore
             pizza.Box();
             return pizza;
         }
+
+        public abstract Pizza CreatePizza(string type);
     }
 }

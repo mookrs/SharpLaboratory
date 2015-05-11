@@ -6,29 +6,30 @@ using System.Threading.Tasks;
 
 namespace FactoryPattern.PizzaStore
 {
-    public class SimplePizzaFactory
+    public class ChicagoPizzaStore : PizzaStore
     {
-        public Pizza CreatePizza(string type)
+        public override Pizza CreatePizza(string type)
         {
-            Pizza pizza = null;
-
             if (type == "cheese")
             {
-                pizza = new NYStyleCheesePizza();
+                return new ChicagoStyleCheesePizza();
             }
             else if (type == "pepperoni")
             {
-                pizza = new NYStylePepperoniPizza();
+                return new ChicagoStylePepperoniPizza();
             }
             else if (type == "clam")
             {
-                pizza = new NYStyleClamPizza();
+                return new ChicagoStyleClamPizza();
             }
             else if (type == "veggie")
             {
-                pizza = new NYStyleVeggiePizza();
+                return new ChicagoStyleVeggiePizza();
             }
-            return pizza;
+            else
+            {
+                return null;
+            }
         }
     }
 }
