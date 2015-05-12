@@ -13,7 +13,7 @@ namespace FactoryPattern.PizzaStore
             Toppings.Add("Shredded Mozzarella Cheese");
         }
 
-        public new void Cut()
+        public override void Cut()
         {
             Console.WriteLine("Cutting the pizza into square slices");
         }
