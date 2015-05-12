@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FactoryPattern.PizzaStore
 {
     public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             PizzaStore nyPizzaStore = new NYPizzaStore();
-            nyPizzaStore.OrderPizza("cheese");
             PizzaStore chicagoStore = new ChicagoPizzaStore();
-            chicagoStore.OrderPizza("veggie");
+
+            Pizza pizza = nyPizzaStore.OrderPizza("cheese");
+            Console.WriteLine("Ethan ordered a " + pizza.Name + Environment.NewLine);
+
+            pizza = chicagoStore.OrderPizza("cheese");
+            Console.WriteLine("Joel ordered a " + pizza.Name + Environment.NewLine);
 
             Console.ReadKey();
         }
