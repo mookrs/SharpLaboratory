@@ -5,10 +5,15 @@
         public NYStyleCheesePizza()
         {
             Name = "NY Style Sauce and Cheese Pizza";
-            Dough = "Thin Crust Dough";
-            Sauce = "Marinara Sauce";
+            //Dough = "Thin Crust Dough";
+            //Sauce = "Marinara Sauce";
 
             Toppings.Add("Grated Reggiano Cheese");
+        }
+
+        public override void Prepare()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

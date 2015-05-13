@@ -10,9 +10,9 @@ namespace FactoryPattern.PizzaStore
     {
         Dough CreateDough();
         Sauce CreateSauce();
-        Cheese CreatteCheese();
+        Cheese CreateCheese();
         List<Veggies> CreateVeggieses();
         Pepperoni CreatePepperoni();
-        Clams CreateClams();
+        Clams CreateClam();
     }
 }

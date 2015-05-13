@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pizzas\ClamPizza.cs" />
+    <Compile Include="Pizzas\ChicagoPizzaIngredientFactory.cs" />
+    <Compile Include="Pizzas\PepperoniPizza.cs" />
+    <Compile Include="Pizzas\VeggiePizza.cs" />
+    <Compile Include="Pizzas\CheesePizza.cs" />
     <Compile Include="ChicagoPizzaStore\ChicagoStyleCheesePizza.cs" />
     <Compile Include="ChicagoPizzaStore\ChicagoStyleClamPizza.cs" />
     <Compile Include="ChicagoPizzaStore\ChicagoStylePepperoniPizza.cs" />
@@ -51,14 +56,14 @@
     <Compile Include="Ingredients\Pepperoni.cs" />
     <Compile Include="Ingredients\Dough.cs" />
     <Compile Include="Ingredients\Sauce.cs" />
-    <Compile Include="IPizzaIngredientFactory.cs" />
-    <Compile Include="NYPizzaIngredientFactory.cs" />
+    <Compile Include="Pizzas\IPizzaIngredientFactory.cs" />
+    <Compile Include="Pizzas\NYPizzaIngredientFactory.cs" />
     <Compile Include="NYPizzaStore\NYStyleCheesePizza.cs" />
     <Compile Include="ChicagoPizzaStore\ChicagoPizzaStore.cs" />
     <Compile Include="NYPizzaStore\NYStyleClamPizza.cs" />
     <Compile Include="NYPizzaStore\NYPizzaStore.cs" />
     <Compile Include="NYPizzaStore\NYStylePepperoniPizza.cs" />
-    <Compile Include="Pizza.cs" />
+    <Compile Include="Pizzas\Pizza.cs" />
     <Compile Include="PizzaStore.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

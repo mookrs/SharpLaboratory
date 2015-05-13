@@ -2,7 +2,7 @@
 
 namespace FactoryPattern.PizzaStore
 {
-    public class NYPizzaIngredientFactory : IPizzaIngredientFactory
+    public class ChicagoPizzaIngredientFactory : IPizzaIngredientFactory
     {
         public Dough CreateDough()
         {
@@ -14,7 +14,7 @@ namespace FactoryPattern.PizzaStore
             return new MarinaraSauce();
         }
 
-        public Cheese CreatteCheese()
+        public Cheese CreateCheese()
         {
             return new ReggianoCheese();
         }
@@ -29,7 +29,7 @@ namespace FactoryPattern.PizzaStore
             return new SlicedPepperoni();
         }
 
-        public Clams CreateClams()
+        public Clams CreateClam()
         {
             return new FreshClams();
         }

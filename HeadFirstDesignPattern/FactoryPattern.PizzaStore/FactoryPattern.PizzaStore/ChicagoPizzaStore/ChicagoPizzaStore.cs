@@ -10,26 +10,38 @@ namespace FactoryPattern.PizzaStore
     {
         public override Pizza CreatePizza(string type)
         {
+            Pizza pizza = null;
+            var ingredientFactory = new ChicagoPizzaIngredientFactory();
+
             if (type == "cheese")
             {
-                return new ChicagoStyleCheesePizza();
+                pizza = new CheesePizza(ingredientFactory)
+                {
+                    Name = "Chicago Style Cheese Pizza"
+                };
             }
             else if (type == "pepperoni")
             {
-                return new ChicagoStylePepperoniPizza();
+                pizza = new PepperoniPizza(ingredientFactory)
+                {
+                    Name = "Chicago Style Pepperoni Pizza"
+                };
             }
             else if (type == "clam")
             {
-                return new ChicagoStyleClamPizza();
+                pizza = new ClamPizza(ingredientFactory)
+                {
+                    Name = "Chicago Style Clam Pizza"
+                };
             }
             else if (type == "veggie")
             {
-                return new ChicagoStyleVeggiePizza();
+                pizza = new VeggiePizza(ingredientFactory)
+                {
+                    Name = "Chicago Style Veggie Pizza"
+                };
             }
-            else
-            {
-                return null;
-            }
+            return pizza;
         }
     }
 }

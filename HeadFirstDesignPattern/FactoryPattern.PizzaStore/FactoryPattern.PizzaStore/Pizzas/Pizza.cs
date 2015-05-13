@@ -9,21 +9,15 @@ namespace FactoryPattern.PizzaStore
     public abstract class Pizza
     {
         public string Name { get; set; }
-        public string Dough { get; set; }
-        public string Sauce { get; set; }
-        public List<string> Toppings = new List<string>(); 
+        public Dough Dough { get; set; }
+        public Sauce Sauce { get; set; }
+        public List<Veggies> Veggieses;
+        public Cheese Cheese { get; set; }
+        public Pepperoni Pepperoni { get; set; }
+        public Clams Clam { get; set; }
+        public List<string> Toppings = new List<string>();
 
-        public void Prepare()
-        {
-            Console.WriteLine("Preparing " + Name);
-            Console.WriteLine("Tossing dough...");
-            Console.WriteLine("Adding sauce...");
-            Console.WriteLine("Adding toppings: ");
-            foreach (string topping in Toppings)
-            {
-                Console.WriteLine("   " + topping);
-            }
-        }
+        public abstract void Prepare();
 
         public void Bake()
         {
