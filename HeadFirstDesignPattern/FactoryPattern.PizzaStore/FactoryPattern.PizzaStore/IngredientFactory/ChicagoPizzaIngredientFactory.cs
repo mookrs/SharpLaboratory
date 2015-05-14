@@ -21,7 +21,7 @@ namespace FactoryPattern.PizzaStore
 
         public List<Veggies> CreateVeggieses()
         {
-            return new List<Veggies>() { new Onion(), new Redpepper() };
+            return new List<Veggies>() { new BlackOlives(), new Spinach(), new Eggplant() };
         }
 
         public Pepperoni CreatePepperoni()

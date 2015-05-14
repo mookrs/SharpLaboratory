@@ -19,4 +19,16 @@
     public class Redpepper : Veggies
     {
     }
+
+    public class BlackOlives : Veggies
+    {
+    }
+
+    public class Spinach : Veggies
+    {
+    }
+
+    public class Eggplant : Veggies
+    {
+    }
 }
