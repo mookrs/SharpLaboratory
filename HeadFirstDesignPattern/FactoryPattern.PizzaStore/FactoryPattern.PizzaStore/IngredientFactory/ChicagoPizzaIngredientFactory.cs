@@ -6,22 +6,22 @@ namespace FactoryPattern.PizzaStore
     {
         public Dough CreateDough()
         {
-            return new ThinCrustDough();
+            return new ThickCrustDough();
         }
 
         public Sauce CreateSauce()
         {
-            return new MarinaraSauce();
+            return new PlumTomatoSauce();
         }
 
         public Cheese CreateCheese()
         {
-            return new ReggianoCheese();
+            return new MozzarellaCheese();
         }
 
         public List<Veggies> CreateVeggieses()
         {
-            return new List<Veggies>() { new Garlic(), new Onion(), new Mushroom(), new Redpepper() };
+            return new List<Veggies>() { new Onion(), new Redpepper() };
         }
 
         public Pepperoni CreatePepperoni()
@@ -31,7 +31,7 @@ namespace FactoryPattern.PizzaStore
 
         public Clams CreateClam()
         {
-            return new FreshClams();
+            return new FrozenClams();
         }
     }
 }

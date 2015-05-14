@@ -7,4 +7,8 @@
     public class ThinCrustDough : Dough
     {
     }
+
+    public class ThickCrustDough : Dough
+    {
+    }
 }

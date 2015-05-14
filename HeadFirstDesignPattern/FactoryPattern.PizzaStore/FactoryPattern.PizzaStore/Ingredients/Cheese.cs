@@ -7,4 +7,8 @@
     public class ReggianoCheese : Cheese
     {
     }
+
+    public class MozzarellaCheese : Cheese
+    {
+    }
 }

@@ -7,4 +7,8 @@
     public class FreshClams : Clams
     {
     }
+
+    public class FrozenClams : Clams
+    {
+    }
 }

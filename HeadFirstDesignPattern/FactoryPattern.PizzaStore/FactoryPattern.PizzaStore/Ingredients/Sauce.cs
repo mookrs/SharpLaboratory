@@ -7,4 +7,8 @@
     public class MarinaraSauce : Sauce
     {
     }
+
+    public class PlumTomatoSauce : Sauce
+    {
+    }
 }
